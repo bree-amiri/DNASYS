@@ -1,0 +1,37 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Site_No: MyString
+  Area_No: MyString
+  Prefix: MyString
+  DPno: MyString
+  Sec: MyString
+  Interim: MyString
+  Locality: MyString
+  LGArea: MyString
+  Parish: MyString
+  County: MyString
+  SclFac: MyString
+  OriginX: MyString
+  OriginY: MyString
+  Comments: MyString
+  Azimuth: MyString
+  Spare: MyString
+
+two:
+  Site_No: MyString
+  Area_No: MyString
+  Prefix: MyString
+  DPno: MyString
+  Sec: MyString
+  Interim: MyString
+  Locality: MyString
+  LGArea: MyString
+  Parish: MyString
+  County: MyString
+  SclFac: MyString
+  OriginX: MyString
+  OriginY: MyString
+  Comments: MyString
+  Azimuth: MyString
+  Spare: MyString

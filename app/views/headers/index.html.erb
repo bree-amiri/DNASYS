@@ -1,0 +1,66 @@
+<h1>Listing headers</h1>
+
+<%= form_tag headers_path, :method =>"get" do %>
+<p>
+	<%= text_field_tag :search, params[:search]%>
+	<%= submit_tag "search", :name => nil %>
+</p>
+
+<%end%>
+
+
+
+
+<table>
+  <thead>
+    <tr>
+      <th>Site no</th>
+      <th>Area no</th>
+      <th>Prefix</th>
+      <th>Dpno</th>
+      <th>Sec</th>
+      <th>Interim</th>
+      <th>Locality</th>
+      <th>Lgarea</th>
+      <th>Parish</th>
+      <th>County</th>
+      <th>Sclfac</th>
+      <th>Originx</th>
+      <th>Originy</th>
+      <th>Comments</th>
+      <th>Azimuth</th>
+      <th>Spare</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @headers.each do |header| %>
+      <tr>
+        <td><%= header.Site_No %></td>
+        <td><%= header.Area_No %></td>
+        <td><%= header.Prefix %></td>
+        <td><%= header.DPno %></td>
+        <td><%= header.Sec %></td>
+        <td><%= header.Interim %></td>
+        <td><%= header.Locality %></td>
+        <td><%= header.LGArea %></td>
+        <td><%= header.Parish %></td>
+        <td><%= header.County %></td>
+        <td><%= header.SclFac %></td>
+        <td><%= header.OriginX %></td>
+        <td><%= header.OriginY %></td>
+        <td><%= header.Comments %></td>
+        <td><%= header.Azimuth %></td>
+        <td><%= header.Spare %></td>
+        <td><%= link_to 'Show', header %></td>
+        <td><%= link_to 'Edit', edit_header_path(header) %></td>
+        <td><%= link_to 'Destroy', header, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Header', new_header_path %>

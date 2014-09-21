@@ -1,0 +1,87 @@
+<%= form_for @header, :html => { :multipart =>true } do |f| %>   
+ 
+  <% if @header.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@header.errors.count, "error") %> prohibited this header from being saved:</h2>
+
+      <ul>
+      <% @header.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :Site_No %><br>
+    <%= f.text_field :Site_No ,:id => 'siteNoField'%>
+      
+  </div>
+  <div class="field">
+    <%= f.label :Area_No %><br>
+    <%= f.text_field :Area_No, :id => 'areaNoField' %>
+  </div>
+  <div class="field">
+    <%= f.label :Prefix %><br>
+   <%= f.select :Prefix , options_for_select([["Deposited Plan", "DP"], ["Strata Plan", "SP"],["Preliminary Deposited Plan", "P"],["Interim, Not Lodged", "I"],["Conty, Parish and Partion", "Plan Catalog No."],["Town and Section", "Town"],["", ""]]) %>
+  </div>
+<div class="field">
+    <%= f.label :DPno %><br>
+    <%= f.text_field :DPno %>
+  </div>
+  <div class="field">
+    <%= f.label :Sec %><br>
+    <%= f.text_field :Sec %>
+  </div>
+  <div class="field">
+    <%= f.label :Interim %><br>
+    <%= f.text_field :Interim %>
+  </div>
+  <div class="field">
+    <%= f.label :Locality %><br>
+    <%= f.text_field :Locality %>
+  </div>
+  <div class="field">
+    <%= f.label :LGArea %><br>
+    <%= f.text_field :LGArea %>
+  </div>
+  <div class="field">
+    <%= f.label :Parish %><br>
+    <%= f.text_field :Parish %>
+  </div>
+  <div class="field">
+    <%= f.label :County %><br>
+    <%= f.text_field :County %>
+  </div>
+  <div class="field">
+    <%= f.label :SclFac %><br>
+    <%= f.text_field :SclFac %>
+  </div>
+  <div class="field">
+    <%= f.label :OriginX %><br>
+    <%= f.text_field :OriginX %>
+  </div>
+  <div class="field">
+    <%= f.label :OriginY %><br>
+    <%= f.text_field :OriginY %>
+  </div>
+  <div class="field">
+    <%= f.label :Comments %><br>
+    <%= f.text_field :Comments %>
+  </div>
+  <div class="field">
+    <%= f.label :Azimuth %><br>
+    <%= f.text_field :Azimuth %>
+  </div>
+  <div class="field">
+    <%= f.label :Spare %><br>
+    <%= f.text_field :Spare %>
+  </div>
+  <div class="field">
+      <%= f.file_field :dp %>
+       </div>
+  <div class="actions">
+  	
+    <%= f.submit %>
+  </div>
+<% end %>

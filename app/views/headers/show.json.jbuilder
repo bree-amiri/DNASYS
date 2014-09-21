@@ -1,0 +1,1 @@
+json.extract! @header, :id, :Site_No, :Area_No, :Prefix, :DPno, :Sec, :Interim, :Locality, :LGArea, :Parish, :County, :SclFac, :OriginX, :OriginY, :Comments, :Azimuth, :Spare, :created_at, :updated_at
